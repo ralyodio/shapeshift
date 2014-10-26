@@ -1,6 +1,10 @@
 shapeshift
 ==========
 
+[![NPM](https://nodei.co/npm/shapeshift.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/shapeshift/)
+
+[![Build Status](https://travis-ci.org/chovy/humanparser.svg?branch=master)](https://travis-ci.org/chovy/humanparser) [![Requirements Status](https://requires.io/github/chovy/humanparser/requirements.png?branch=master)](https://requires.io/github/chovy/humanparser/requirements/?branch=master)
+
 shapeshift.io api for node.js (unofficial)
 
 

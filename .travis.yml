@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- 0.8
+- 0.1
+deploy:
+  provider: npm
+  email: anthony@chovy.com
+  api-key:
+    secure: nUunVDGEvFJTNkaaxy1YZO8qztD/ZnnQH5H3SQthQ9IpaDRqEWv861eiqVZqxB9n0Ncnv/aSR//FDcPm/phGu2AALitr3IB8zFMyWrxuYwrvC+BNnEfKRQhgZ9LOneZBamKm/7gu3c0+oVPnmA4HNGYSrxyzb/ezydTWdKz7oZ0=
+  on:
+    tags: true
+    repo: chovy/shapeshift
