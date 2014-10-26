@@ -46,7 +46,7 @@ Gets the current rate offered by Shapeshift.
 Gets the current deposit limit set by Shapeshift.
 
 	var shapeshift = require('shapeshift');
-pdate 	var pair = 'btc_ltc';
+	var pair = 'btc_ltc';
 
 	shapeshift.getLimit(pair)
 		.then(function(data){
