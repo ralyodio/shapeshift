@@ -1,0 +1,41 @@
+{
+  "name": "shapeshift",
+  "version": "0.0.1",
+  "description": "shapeshift.io api for node.js (unofficial)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chovy/shapeshift.git"
+  },
+  "keywords": [
+    "btc",
+	"ltc",
+	"ppc",
+	"drk",
+	"doge",
+    "bitcoin",
+    "litecoin",
+    "dogecoin",
+	"darkcoin",
+	"peercoin",
+    "cryptocurrency",
+	"exchange",
+    "shapeshift"
+  ],
+  "author": "Anthony Ettinger (chovy)",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "q": "^1.0.1",
+    "request": "^2.46.0",
+    "request-promise": "^0.2.4"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "chai-as-promised": "^4.1.1",
+    "mocha": "^2.0.1"
+  }
+}
