@@ -1,6 +1,6 @@
 {
   "name": "shapeshift",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "shapeshift.io api for node.js (unofficial)",
   "main": "index.js",
   "scripts": {
