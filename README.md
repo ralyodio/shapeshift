@@ -13,10 +13,22 @@ An exchange between coins on ShapeShift takes only a few seconds, and no account
 The benefit of this is that you could have a web site where a payout to a content provider is paid out in a different currency than
 what the consumer paid with. For example, Joe wants to be paid in Bitcoin, while Sally wants to pay in Litecoin.
 
+## Install
+
+	npm install shapeshift
+
+	var shapeshift = require('shapeshift');
+
+	shapeshift.getRate(pair)
+		.then(function(data){
+			//do something w/ data
+		});
+		
 ## Usage
 
 Gets the current rate offered by Shapeshift.
 
+	var shapeshift = require('shapeshift');
 	var pair = 'btc_ltc';
 
 	shapeshift.getRate(pair)
@@ -28,7 +40,8 @@ Gets the current rate offered by Shapeshift.
 
 Gets the current deposit limit set by Shapeshift.
 
-	var pair = 'btc_ltc';
+	var shapeshift = require('shapeshift');
+pdate 	var pair = 'btc_ltc';
 
 	shapeshift.getLimit(pair)
 		.then(function(data){
