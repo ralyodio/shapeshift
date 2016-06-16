@@ -1,6 +1,8 @@
 language: node_js
 node_js:
-- 0.1
+- "4"
+- "5"
+- "6"
 deploy:
   provider: npm
   email: anthony@chovy.com
