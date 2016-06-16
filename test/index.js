@@ -1,7 +1,7 @@
-var chai = require('chai');
-//var chaiAsPromised = require("chai-as-promised");
-var expect = chai.expect;
-var shapeshift = require('..');
+const chai = require('chai');
+//const chaiAsPromised = require("chai-as-promised");
+const expect = chai.expect;
+const shapeshift = require('..');
 
 //chai.use(chaiAsPromised);
 
@@ -9,11 +9,11 @@ var shapeshift = require('..');
 describe('Get rates', function() {
 
 	it('Should return the exchange rates for btc_ltc', function(done) {
-		var pair = 'btc_ltc';
+		const pair = 'btc_ltc';
 
 		shapeshift.getRate(pair)
 			.then(function(data){
-				var body = data.body;
+				const body = data.body;
 
 				expect(body.pair).to.equal(pair);
 				expect(body.rate).to.be.above(0);
@@ -28,11 +28,11 @@ describe('Get rates', function() {
 	});
 
 	it('Should return the exchange rates for ltc_btc', function(done) {
-		var pair = 'ltc_btc';
+		const pair = 'ltc_btc';
 
 		shapeshift.getRate(pair)
 			.then(function(data){
-				var body = data.body;
+				const body = data.body;
 
 				expect(body.pair).to.equal(pair);
 				expect(body.rate).to.be.above(0);
@@ -49,11 +49,11 @@ describe('Get rates', function() {
 
 describe('Get limits', function() {
 	it('Should return the limit for btc_ltc', function(done) {
-		var pair = 'btc_ltc';
+		const pair = 'btc_ltc';
 
 		shapeshift.getLimit(pair)
 			.then(function(data){
-				var body = data.body;
+				const body = data.body;
 
 				expect(body.pair).to.equal(pair);
 				expect(body.limit).to.be.above(0);
@@ -71,7 +71,7 @@ describe('Get limits', function() {
 
 		shapeshift.getLimit(pair)
 			.then(function(data){
-				var body = data.body;
+				const body = data.body;
 
 				expect(body.pair).to.equal(pair);
 				expect(body.limit).to.be.above(0);
@@ -83,4 +83,22 @@ describe('Get limits', function() {
 				done(err);
 			});
 	});
+});
+
+describe('Get coins', function() {
+	it('Should return the list of available coins', function(done) {
+		shapeshift.getCoins()
+			.then(function(data){
+				const coins = data.body;
+
+				expect(Object.keys(coins).length).to.be.above(0);
+				done();
+			}, function(err){
+				done(err);
+			})
+			.catch(function(err){
+				done(err);
+			});
+	});
+	
 });

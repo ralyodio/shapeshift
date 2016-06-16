@@ -1,4 +1,4 @@
-var shapeshift = require('./index');
+const shapeshift = require('./index');
 
 shapeshift.getRate('btc_ltc')
 	.then(function(data){
