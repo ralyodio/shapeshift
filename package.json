@@ -1,7 +1,7 @@
 {
   "name": "shapeshift",
-  "version": "0.0.4",
-  "description": "shapeshift.io api for node.js (unofficial)",
+  "version": "1.0.0",
+  "description": "shapeshift.io api for node.js",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -28,15 +28,15 @@
   "author": "Anthony Ettinger (chovy)",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^2.4.1",
-    "q": "^1.0.1",
-    "request": "^2.46.0",
-    "request-promise": "^0.2.4"
+    "lodash": "^4.x",
+    "q": "^1.x",
+    "request": "^2.x",
+    "request-promise": "^3.x"
   },
   "devDependencies": {
-    "chai": "^1.9.2",
-    "chai-as-promised": "^4.1.1",
-    "mocha": "^2.0.1"
+    "chai": "^3.x",
+    "chai-as-promised": "^5.x",
+    "mocha": "^2.x"
   },
   "bugs": {
     "url": "https://github.com/chovy/shapeshift/issues"
