@@ -1,6 +1,5 @@
 shapeshift
 ==========
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/chovy/shapeshift?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![NPM](https://nodei.co/npm/shapeshift.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/shapeshift/)
 
@@ -71,7 +70,7 @@ Get the current list of coins supported by Shapeshift.
 
 ## Current pairs supported
 
-btc, ltc, ppc, drk, doge
+btc, eth, ltc, ppc, drk, doge and more. Full list is available at: https://shapeshift.io/#/coins
 
 Note: use an underscore to seperate currencies in a pair (ie: `ltc_doge` or `doge_ltc`)
 
