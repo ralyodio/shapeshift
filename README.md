@@ -65,7 +65,7 @@ Get the current list of coins supported by Shapeshift.
 	shapeshift.getCoins()
 		.then(data => {
 			const coins = data.body;
-			//{"pair":"btc_ltc","limit":"1.98046131"}
+			//{BTC:..., ETH: ...}
 		});
 
 ## Current pairs supported
