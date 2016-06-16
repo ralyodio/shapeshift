@@ -1,9 +1,9 @@
-var _ = require('lodash');
-var requestp = require('request-promise');
+const _ = require('lodash');
+const requestp = require('request-promise');
 
-var shapeshift = module.exports = {};
-var url = 'http://shapeshift.io';
-var defaults = {
+const shapeshift = module.exports = {};
+const url = 'https://shapeshift.io';
+const defaults = {
 	json: true,
 	resolveWithFullResponse: true
 };
@@ -25,3 +25,7 @@ shapeshift.getRate = function(pair){
 shapeshift.getLimit = function(pair){
 	return get(url + '/limit/' + pair);
 };
+
+shapeshift.getCoins = function(){
+	return get(url + '/getcoins');
+}

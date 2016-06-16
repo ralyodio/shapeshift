@@ -6,24 +6,27 @@ shapeshift
 
 [![Build Status](https://travis-ci.org/chovy/shapeshift.svg?branch=master)](https://travis-ci.org/chovy/shapeshift) [![Requirements Status](https://requires.io/github/chovy/shapeshift/requirements.svg?branch=master)](https://requires.io/github/chovy/shapeshift/requirements/?branch=master)
 
-
-shapeshift.io api for node.js (unofficial)
-
+shapeshift.io api for node.js
 
 ## What is shapeshift.io?
 
-ShapeShift is an instant exchange for Litecoin, Bitcoin, Peercoin, Dogecoin, Darkcoin, and other cryptocoins.
-As a new service, it is the fastest way to trade between these digital currencies.
-An exchange between coins on ShapeShift takes only a few seconds, and no account is needed.
+ShapeShift is an instant exchange for Litecoin, Bitcoin, Peercoin, Dogecoin, Darkcoin, and other crypto-currencies.
 
-The benefit of this is that you could have a web site where a payout to a content provider is paid out in a different currency than
-what the consumer paid with. For example, Joe wants to be paid in Bitcoin, while Sally wants to pay in Litecoin.
+ShapeShift is the fastest way to exchange these digital currencies for one another.
+An exchange between crypto-currencies on ShapeShift takes only a few seconds, and no account is needed.
+
+The benefit of this is an application or site could send a payout to a content provider paid out in a different currency than
+what the consumer paid with.
+
+For example, Joe wants to be paid in Bitcoin, while Sally wants to pay him in Litecoin.
+ShapeShift allows you to convert the currency on behalf of the user.
 
 ## Install
 
-	npm install shapeshift
+	npm install --save shapeshift
 
-	var shapeshift = require('shapeshift');
+	const shapeshift = require('shapeshift');
+	const pair = 'btc_ltc';
 
 	shapeshift.getRate(pair)
 		.then(function(data){
@@ -32,41 +35,48 @@ what the consumer paid with. For example, Joe wants to be paid in Bitcoin, while
 		
 ## Usage
 
-Gets the current rate offered by Shapeshift.
+Get the current rate offered by Shapeshift.
 
-	var shapeshift = require('shapeshift');
-	var pair = 'btc_ltc';
+	const shapeshift = require('shapeshift');
+	const pair = 'btc_ltc';
 
 	shapeshift.getRate(pair)
 		.then(function(data){
-			var body = data.body;
+			const body = data.body;
 
 			//{"pair":"btc_ltc","rate":"93.83852691"}
 		};
 
-Gets the current deposit limit set by Shapeshift.
+Get the current deposit limit set by Shapeshift.
 
-	var shapeshift = require('shapeshift');
-	var pair = 'btc_ltc';
+	const shapeshift = require('shapeshift');
+	const pair = 'btc_ltc';
 
 	shapeshift.getLimit(pair)
 		.then(function(data){
-			var body = data.body;
+			const body = data.body;
 
 			//{"pair":"btc_ltc","limit":"1.98046131"}
 		});
 
-## Pairs
+Get the current list of coins supported by Shapeshift.
+
+	const shapeshift = require('shapeshift');
+
+	shapeshift.getCoins()
+		.then(data => {
+			const coins = data.body;
+			//{"pair":"btc_ltc","limit":"1.98046131"}
+		});
+
+## Current pairs supported
 
 btc, ltc, ppc, drk, doge
 
-use an underscore to seperate currencies in a pair (ie: `ltc_doge` or `doge_ltc`)
-
-
+Note: use an underscore to seperate currencies in a pair (ie: `ltc_doge` or `doge_ltc`)
 
 ## API
 
 https://info.shapeshift.io/api
-
 
 License MIT
