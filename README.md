@@ -65,7 +65,7 @@ use an underscore to seperate currencies in a pair (ie: `ltc_doge` or `doge_ltc`
 
 ## API
 
-http://shapeshift.io/api.html
+https://info.shapeshift.io/api
 
 
 License MIT
